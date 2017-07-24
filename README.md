@@ -56,3 +56,42 @@
 
 ### 3.左右居中
  * margin: 0 auto
+- - -
+## 三、position
+### 1.static
+ * 默认设置，元素按display设置从左到右、从上到下依次排列
+ * 浏览器计算元素占位
+
+### 2.relative
+ * 在不设置上下左右时按static显示。
+ * 当设置上下左右后按默认位置和上下左右值计算位置。
+ * 占位按原static默认占位。不脱离文档流
+
+### 3.absolute
+ * 元素按最近的posotion为relative的父元素计算位置。
+ * 以该父元素左上角为0,0。
+ * 无占位。脱离文档流。
+
+### 4.fixed
+ * 按所在窗口左上角为0,0计算位置
+ * 无占位。脱离文档流。
+- - -
+## 四、float
+### 1.意义及缺陷
+ * 相当于inline-block+排列顺序
+ * 与absolute相比存在占位
+ * 破坏了本身的高度即高度为0
+ * 垂直margin不折叠
+
+### 2.清除浮动
+ * 增加clear div
+ * overflow+zoom
+ * after+zoom
+
+## 五、inline-block
+### 1.显示排列
+ * 以inline方式排列，以block形式展现。
+
+### 2.元素间隙
+ * 吃胶囊
+ * 闭合标签换行
